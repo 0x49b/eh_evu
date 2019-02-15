@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+
+body, html {
+    background: url(../img/no_signal.gif);
+    background-size: auto;
+
+    color: #ffffff;
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.8);
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.title {
+    padding-top: 10px;
+    font-family: 'Staatliches', cursive;
+}
+
+.title-img {
+    margin-top: 50px;
+    max-height: 200px;
+    width: auto;
+}
+
+.text {
+    margin-top: 35px;
+    font-size: 2em;
+    font-family: 'Staatliches', cursive;
+    padding: 10px;
+}
+
+.big {
+    font-size: 2.5em;
+}

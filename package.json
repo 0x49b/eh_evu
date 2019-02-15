@@ -1,0 +1,31 @@
+{
+  "name": "eh_evu",
+  "version": "1.0.0",
+  "description": "EVU Server for Energy Hackdays 2019",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lichtwellenreiter/eh_evu.git"
+  },
+  "author": "lichtwellenreiter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lichtwellenreiter/eh_evu/issues"
+  },
+  "homepage": "https://github.com/lichtwellenreiter/eh_evu#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "consolidate": "^0.15.1",
+    "express": "latest",
+    "morgan": "^1.9.1",
+    "mustache": "^3.0.1",
+    "redis": "^2.8.0"
+  },
+  "engines": {
+    "npm": ">=5.6.0"
+  }
+}

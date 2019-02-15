@@ -1,0 +1,163 @@
+apiVersion: v1
+kind: Template
+metadata:
+  name: pieni-poc
+  annotations:
+    description: pieni-poc
+    tags: node, poc, redis
+objects:
+# Deployment Configuration
+- apiVersion: v1
+  kind: DeploymentConfig
+  metadata:
+    generation: 302
+    labels:
+      app: pieni-poc-dev
+      STAGE: dev
+    name: pieni-poc-dev
+  spec:
+    replicas: 1
+    strategy:
+      type: Rolling
+      rollingParams:
+        intervalSeconds: 20
+        maxUnavailable: 0%
+        timeoutSeconds: 600
+        maxSurge: 25%
+    selector:
+      app: pieni-poc-dev
+      deploymentconfig: pieni-poc-dev
+    template:
+      metadata:
+        labels:
+          app: pieni-poc-dev
+          deploymentconfig: pieni-poc-dev
+      spec:
+        containers:
+          - env:
+              - name: STAGE
+                value: "dev"
+              - name: SERVER_URL
+                value: ${PIENI_URL}
+              - name: REDIS_VERSION
+                value: ${PIENI_POC_VERSION}
+              - name: SERVER_PORT
+                value: "3000"
+              - name: SERVER_EXT
+                value: "3000"
+              - name: REDIS_URL
+                value: "redis"
+              - name: REDIS_PORT
+                value: "6379"
+            image: >-
+              docker.bin.sbb.ch/pieni-poc/pieni-poc:${PIENI_POC_VERSION}
+            imagePullPolicy: IfNotPresent
+            livenessProbe:
+              failureThreshold: 5
+              httpGet:
+                path: /liveness
+                port: 3000
+                scheme: HTTP
+              initialDelaySeconds: 40
+              periodSeconds: 40
+              successThreshold: 1
+              timeoutSeconds: 1
+            name: pieni-poc-dev
+            ports:
+              - containerPort: 3000
+                protocol: TCP
+            readinessProbe:
+              failureThreshold: 5
+              httpGet:
+                path: /health
+                port: 3000
+                scheme: HTTP
+              initialDelaySeconds: 40
+              periodSeconds: 40
+              successThreshold: 1
+              timeoutSeconds: 1
+            resources:
+              limits:
+                cpu: '2'
+                memory: 6Gi
+              requests:
+                cpu: 1m
+                memory: 1Gi
+            terminationMessagePath: /dev/termination-log
+            terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+    test: false
+    triggers:
+    - type: ConfigChange
+# Service
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: pieni-poc
+    labels:
+      app: pieni-poc-dev
+      env: pieni
+  spec:
+    ports:
+    - name: 3000-tcp
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+    selector:
+      app: pieni-poc-dev
+      deploymentconfig: pieni-poc-dev
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+# Route
+- apiVersion: v1
+  kind: Route
+  metadata:
+    name: pieni-poc-dev
+    labels:
+        app: pieni-poc-dev
+        env: dev
+  spec:
+    host: ${PIENI_URL}
+    template:
+      metadata:
+        labels:
+          name: pieni-poc-dev
+    to:
+      kind: Service
+      name: pieni-poc
+    port:
+      targetPort: 3000-tcp
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: edge
+# Parameters/ Environment
+parameters:
+  - name: STAGE
+    description: "The stage: dev, inte, prod"
+    required: true
+    value: "dev"
+  - name: PIENI_POC_NAME
+    description: "The name of your application"
+    required: true
+    value: "pieni-poc"
+  - name: PIENI_POC_VERSION
+    description: "The version of the app to deploy"
+    required: true
+  - name: OPENSHIFT_BASE_DOMAIN
+    description: "The OpenShift address of the current cluster"
+    value: ose.sbb-cloud.net
+    required: true
+  - name: IMAGESTREAM_NAMESPACE
+    description: "Artifactory Project where are built the image streams"
+    value: pieni-poc
+    required: true
+  - name: PIENI_URL
+    description: "URL for the Server and Route"
+    value: pieni.app.ose.sbb-cloud.net
+    required: true
