@@ -8,6 +8,654 @@ Content-Type: application/json
     "points": 28,
     "location": "Bern",
     "address": "Hilfikerstrasse 1",
+    "id": 10,
+      "assets": [
+          {
+              "status": true,
+              "gpio": 18,
+              "times": [
+                  {
+                      "endTime": "NULL",
+                      "startTime": "NULL",
+                      "minDuration": "NULL"
+                  }
+              ],
+              "id": 11,
+              "name": "Freezer"
+          },
+          {
+              "status": true,
+              "gpio": 23,
+              "times": [
+                  {
+                      "endTime": "NULL",
+                      "startTime": "NULL",
+                      "minDuration": "NULL"
+                  }
+              ],
+              "id": 12,
+              "name": "Charging Station"
+          }
+      ]
+  }
+}
+
+<> 2019-02-16T012511.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+      "evu": true,
+    "zip": "3003",
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10,
+      "assets": [
+          {
+              "status": false,
+              "gpio": 18,
+              "times": [
+                  {
+                      "endTime": "NULL",
+                      "startTime": "NULL",
+                      "minDuration": "NULL"
+                  }
+              ],
+              "id": 11,
+              "name": "Freezer"
+          },
+          {
+              "status": true,
+              "gpio": 23,
+              "times": [
+                  {
+                      "endTime": "NULL",
+                      "startTime": "NULL",
+                      "minDuration": "NULL"
+                  }
+              ],
+              "id": 12,
+              "name": "Charging Station"
+          }
+      ]
+  }
+}
+
+<> 2019-02-16T012421.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10,
+      "assets": [
+          {
+              "status": true,
+              "gpio": 18,
+              "times": [
+                  {
+                      "endTime": "NULL",
+                      "startTime": "NULL",
+                      "minDuration": "NULL"
+                  }
+              ],
+              "id": 11,
+              "name": "Freezer"
+          },
+          {
+              "status": true,
+              "gpio": 23,
+              "times": [
+                  {
+                      "endTime": "NULL",
+                      "startTime": "NULL",
+                      "minDuration": "NULL"
+                  }
+              ],
+              "id": 12,
+              "name": "Charging Station"
+          }
+      ]
+  }
+}
+
+<> 2019-02-16T012347.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+      "assets": [
+          {
+              "status": true,
+              "gpio": 18,
+              "times": [
+                  {
+                      "endTime": "NULL",
+                      "startTime": "NULL",
+                      "minDuration": "NULL"
+                  }
+              ],
+              "id": 11,
+              "name": "Freezer"
+          },
+          {
+              "status": true,
+              "gpio": 23,
+              "times": [
+                  {
+                      "endTime": "NULL",
+                      "startTime": "NULL",
+                      "minDuration": "NULL"
+                  }
+              ],
+              "id": 12,
+              "name": "Charging Station"
+          }
+      ]
+  }
+}
+
+<> 2019-02-16T012330.400.html
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+<> 2019-02-16T012057.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+      "evu": true,
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": false,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+<> 2019-02-16T012003.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": false,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+<> 2019-02-16T011824.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+      "evu": true,
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+<> 2019-02-16T011759.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+<> 2019-02-16T011637.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+      "evu": true,
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+<> 2019-02-16T011621.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+      "evu": true,
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+<> 2019-02-16T011454.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+      "evu": true,
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+<> 2019-02-16T011031.200.json
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+    "points": 0,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+<> 2019-02-16T125814.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
     "id": 10
   },
   "assets": [
@@ -1302,250 +1950,6 @@ Content-Type: application/json
 }
 
 <> 2019-02-16T105201.200.json
-
-###
-
-POST http://localhost:3000/assets
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Mike Müller",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-<> 2019-02-16T105156.200.json
-
-###
-
-POST http://localhost:3000/assets
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Mike Müller",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-<> 2019-02-16T093913.200.json
-
-###
-
-POST http://localhost:3000/assets
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Mike Müller",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-<> 2019-02-16T093907.200.json
-
-###
-
-POST http://localhost:3000/assets
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Mike Müller",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-<> 2019-02-16T093902.200.json
-
-###
-
-POST http://localhost:3000/assets
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Mike Müller",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-<> 2019-02-16T093831.500.html
-
-###
-
-PUT http://localhost:3000/assets?id=10
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Mike Müller",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-<> 2019-02-16T093408.200.json
-
-###
-
-POST http://localhost:3000/assets
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-<> 2019-02-16T093357.200.json
-
-###
-
-POST http://localhost:3000/asset
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-<> 2019-02-16T093344.404.html
-
-###
-
-PUT http://localhost:3000/assets?id=10
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Mike Müller",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-###
-
-PUT http://localhost:3000/assets?id=10
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Mike Müller",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-###
-
-PUT http://localhost:3000/assets?id=10
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Mike Müller",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-###
-
-PUT http://localhost:3000/assets?id=10
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Mike Müller",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-###
-
-POST http://localhost:3000/assets
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-<> 2019-02-16T092836.200.json
-
-###
-
-POST http://localhost:3000/asset
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-<> 2019-02-16T092817.404.html
 
 ###
 

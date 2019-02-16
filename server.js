@@ -135,10 +135,10 @@ app.put('/assets', jsonParser, (req, res) => {
                 console.log(oData.customer.evu);
                 console.log(nData.customer.evu);
 
-                if (nData.customer.evu == undefined && oData.customer.evu != undefined) {
+                if(nData.customer.evu === undefined && oData.customer.evu !== undefined) {
+                    console.log(oData.customer.assets);
+                    console.log(nData.customer.assets);
                     nData.customer.assets = oData.customer.assets;
-                } else if (oData.customer.evu != undefined) {
-                    nData.customer.evu = oData.customer.evu;
                 }
 
                 nData.customer.points = helper.getPoints(oData.customer.points);
