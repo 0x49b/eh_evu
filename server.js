@@ -99,7 +99,7 @@ app.post('/assets', jsonParser, (req, res) => {
                 'message': 'ID already exists'
             });
         } else {
-            data.customer.points = data.customer.points + 1;
+            data.customer.points = helper.getPoints(data.customer.points);
             client.set(data.customer.id, JSON.stringify(data), redis.print);
 
             res.json(data);
@@ -131,7 +131,12 @@ app.put('/assets', jsonParser, (req, res) => {
             } else {
 
                 oData = JSON.parse(value);
-                nData.customer.points = oData.customer.points + 1;
+
+                if( oData.evu !== undefined && nData.evu === undefined){
+                    nData.customer.assets = oData.customer.assets;
+                }
+
+                nData.customer.points = helper.getPoints(oData.customer.points);
 
                 client.del(id);
                 client.set(id, JSON.stringify(nData), redis.print);
@@ -143,6 +148,36 @@ app.put('/assets', jsonParser, (req, res) => {
             }
         });
     }
+});
+
+/**
+ * Get the assets based on a Customer ID
+ */
+app.get('/assets', (req, res) => {
+
+    let id = req.query.id;
+
+    if (id === undefined || id === "" || id === null) {
+        res.json({
+            'error': true,
+            'message': 'ID is mandatory'
+        })
+    } else {
+        client.get(id, (err, value) => {
+
+            if (err) {
+                res.json({
+                    'error': true,
+                    'message': 'Could not find customer with id' + id
+                });
+            } else {
+                res.json(JSON.parse(value));
+            }
+
+        })
+    }
+
+
 });
 
 

@@ -1,3 +1,443 @@
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+<> 2019-02-16T110102.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+<> 2019-02-16T110101.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+<> 2019-02-16T110059.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+<> 2019-02-16T110056.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+    "points": 28,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
+}
+
+<> 2019-02-16T110015.200.json
+
+###
+
+GET http://localhost:3000/assets?id=10
+
+<> 2019-02-16T105906.200.json
+
+###
+
+GET http://localhost:3000/assets?id=10
+
+<> 2019-02-16T105845.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T105330.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T105327.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T105325.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T105258.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T105251.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T105220.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T105218.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T105216.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T105214.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T105201.200.json
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T105156.200.json
+
+###
+
 POST http://localhost:3000/assets
 Content-Type: application/json
 
@@ -539,218 +979,6 @@ Content-Type: application/json
 }
 
 <> 2019-02-16T020040.200.json
-
-###
-
-POST http://localhost:3000/assets
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-<> 2019-02-16T015838.200.json
-
-###
-
-POST http://localhost:3000/assets
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-<> 2019-02-16T015727.200.json
-
-###
-
-POST http://localhost:3000/assets
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-
-<> 2019-02-16T015643.200.json
-
-###
-
-PUT http://localhost:3000/assets?id=10
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": "0"
-  }
-}
-
-###
-
-PUT http://localhost:3000/assets?id=10
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": "0"
-  }
-}
-
-###
-
-PUT http://localhost:3000/assets?id=10
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": "0"
-  }
-}
-
-###
-
-PUT http://localhost:3000/assets?id=10
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": "0"
-  }
-}
-
-###
-
-PUT http://localhost:3000/assets?id=10
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": "0"
-  }
-}
-
-###
-
-PUT http://localhost:3000/assets?id=1
-
-###
-
-PUT http://localhost:3000/assets?id=1
-
-###
-
-PUT http://localhost:3000/assets
-
-<> 2019-02-16T014131.200.json
-
-###
-
-POST http://localhost:3000/asset
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": 1,
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": "0"
-  }
-}
-
-###
-
-POST http://localhost:3000/assets
-Content-Type: application/json
-
-{
-  "customer": {
-    "id": "i1tfr1qiu",
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": "0"
-  }
-}
-
-<> 2019-02-15T061651.200.json
-
-###
-
-GET http://localhost:3000/generateCustomerId
-
-<> 2019-02-15T061618.200.json
-
-###
-
-GET http://localhost:3000/generateCustomerId
-
-<> 2019-02-15T061617.200.json
-
-###
-
-GET http://localhost:3000/generateCustomerId
-
-<> 2019-02-15T061616.200.json
-
-###
-
-GET http://localhost:3000/generateCustomerId
-
-<> 2019-02-15T061612.200.json
-
-###
-
-GET http://localhost:3000/generateCustomerId
-
-<> 2019-02-15T061546.200.json
 
 ###
 

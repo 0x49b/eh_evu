@@ -12,19 +12,50 @@ GET http://localhost:3000/health
 GET http://localhost:3000/generateCustomerId
 ###
 
+GET http://localhost:3000/assets?id=10
+###
+
 
 POST http://localhost:3000/assets
 Content-Type: application/json
 
 {
   "customer": {
-    "id": 10,
-    "name": "Mike Müller",
-    "address": "Hilfikerstrasse 1",
+    "name": "Mike Mueller",
     "zip": "3003",
+    "points": 0,
     "location": "Bern",
-    "points": 0
-  }
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
 }
 ###
 
@@ -34,13 +65,41 @@ Content-Type: application/json
 
 {
   "customer": {
-    "id": 10,
-    "name": "Mike Müller",
-    "address": "Hilfikerstrasse 1",
+    "name": "Mike Mueller",
     "zip": "3003",
+    "points": 28,
     "location": "Bern",
-    "points": 0
-  }
+    "address": "Hilfikerstrasse 1",
+    "id": 10
+  },
+  "assets": [
+    {
+      "status": true,
+      "gpio": 18,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 11,
+      "name": "Freezer"
+    },
+    {
+      "status": true,
+      "gpio": 23,
+      "times": [
+        {
+          "endTime": "NULL",
+          "startTime": "NULL",
+          "minDuration": "NULL"
+        }
+      ],
+      "id": 12,
+      "name": "Charging Station"
+    }
+  ]
 }
 
 ###
