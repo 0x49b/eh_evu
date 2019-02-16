@@ -6,6 +6,7 @@ const pjson = require('./package.json');
 const config = require('./config.json');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+var npid = require('npid');
 const path = require('path');
 const app = express();
 
@@ -90,14 +91,23 @@ app.post('/assets', jsonParser, (req, res) => {
         });
     }
 
-    data.customer.points = data.customer.points + 1;
-    client.set(data.customer.id, JSON.stringify(data), redis.print);
+    client.get(data.customer.id, (err, value) => {
 
-    res.json(data);
+        if (err) {
+            res.json({
+                'error': true,
+                'message': 'ID already exists'
+            });
+        } else {
+            data.customer.points = data.customer.points + 1;
+            client.set(data.customer.id, JSON.stringify(data), redis.print);
+
+            res.json(data);
+        }
+    });
 });
 
 // PUT Assets
-
 app.put('/assets', jsonParser, (req, res) => {
 
     let id = req.query.id;
@@ -123,16 +133,16 @@ app.put('/assets', jsonParser, (req, res) => {
                 oData = JSON.parse(value);
                 nData.customer.points = oData.customer.points + 1;
 
+                client.del(id);
+                client.set(id, JSON.stringify(nData), redis.print);
+
                 console.log(oData);
                 console.log(nData);
+
+                res.json(nData);
             }
-
         });
-
-
     }
-
-
 });
 
 

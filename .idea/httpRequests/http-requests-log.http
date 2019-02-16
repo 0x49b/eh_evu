@@ -1,0 +1,756 @@
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T093913.200.json
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T093907.200.json
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T093902.200.json
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T093831.500.html
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T093408.200.json
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T093357.200.json
+
+###
+
+POST http://localhost:3000/asset
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T093344.404.html
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T092836.200.json
+
+###
+
+POST http://localhost:3000/asset
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T092817.404.html
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+PUT http://192.168.99.12:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T020856.500.html
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T020830.500.html
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T020818.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T020749.500.html
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T020118.200.json
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T020107.200.json
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T020040.200.json
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T015838.200.json
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T015727.200.json
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
+  }
+}
+
+<> 2019-02-16T015643.200.json
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": "0"
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": "0"
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": "0"
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": "0"
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": "0"
+  }
+}
+
+###
+
+PUT http://localhost:3000/assets?id=1
+
+###
+
+PUT http://localhost:3000/assets?id=1
+
+###
+
+PUT http://localhost:3000/assets
+
+<> 2019-02-16T014131.200.json
+
+###
+
+POST http://localhost:3000/asset
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 1,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": "0"
+  }
+}
+
+###
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": "i1tfr1qiu",
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": "0"
+  }
+}
+
+<> 2019-02-15T061651.200.json
+
+###
+
+GET http://localhost:3000/generateCustomerId
+
+<> 2019-02-15T061618.200.json
+
+###
+
+GET http://localhost:3000/generateCustomerId
+
+<> 2019-02-15T061617.200.json
+
+###
+
+GET http://localhost:3000/generateCustomerId
+
+<> 2019-02-15T061616.200.json
+
+###
+
+GET http://localhost:3000/generateCustomerId
+
+<> 2019-02-15T061612.200.json
+
+###
+
+GET http://localhost:3000/generateCustomerId
+
+<> 2019-02-15T061546.200.json
+
+###
+

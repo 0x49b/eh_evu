@@ -1,0 +1,10 @@
+{
+  "customer": {
+    "id": 10,
+    "name": "Mike Müller",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 1
+  }
+}

@@ -19,24 +19,7 @@ Content-Type: application/json
 {
   "customer": {
     "id": 10,
-    "name": "Meier",
-    "address": "Hilfikerstrasse 1",
-    "zip": "3003",
-    "location": "Bern",
-    "points": 0
-  }
-}
-###
-
-
-POST http://localhost:3000/asset
-Content-Type: application/json
-
-
-{
-  "customer": {
-    "id": 10,
-    "name": "Meier",
+    "name": "Mike Müller",
     "address": "Hilfikerstrasse 1",
     "zip": "3003",
     "location": "Bern",
@@ -52,11 +35,12 @@ Content-Type: application/json
 {
   "customer": {
     "id": 10,
-    "name": "Meier",
+    "name": "Mike Müller",
     "address": "Hilfikerstrasse 1",
     "zip": "3003",
     "location": "Bern",
     "points": 0
   }
 }
+
 ###
