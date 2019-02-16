@@ -9,64 +9,79 @@
     <link rel="icon" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/css/bstheme.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-	
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
 
-      // Load the Visualization API and the corechart package.
-      google.charts.load('current', {'packages':['corechart']});
+        // Load the Visualization API and the corechart package.
+        google.charts.load('current', {'packages': ['corechart']});
 
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawChart);
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Hour', 'Usage'],
-          ['01', 1],
-          ['02', 1],
-          ['03', 2],
-          ['04', 2],
-		  ['05', 3],
-		  ['06', 4],
-		  ['07', 6],
-		  ['08', 8],
-		  ['09', 7],
-		  ['10', 6],
-		  ['11', 6],
-          ['12', 5],
-          ['13', 5],
-          ['14', 6],
-		  ['15', 6],
-		  ['16', 7],
-		  ['17', 8],
-		  ['18', 8],
-		  ['19', 9],
-		  ['20', 6],
-		  ['21', 5],
-          ['22', 2],
-          ['23', 2],
-          ['24', 1]		  
-        ]);
+        // Set a callback to run when the Google Visualization API is loaded.
+        google.charts.setOnLoadCallback(drawChart);
+        // Callback that creates and populates a data table,
+        // instantiates the pie chart, passes in the data and
+        // draws it.
 
-        // Set chart options
-        var options = {
-						title: 'Durchschnittlicher Verbrauch',
-						curveType: 'function',
-						legend: { position: 'bottom' }
-					};
+        function drawChart(data) {
+            var data = google.visualization.arrayToDataTable([
+                ['Minute', 'Usage'],
+                ['01', 1],
+                ['02', 1],
+                ['03', 2],
+                ['04', 2],
+                ['05', 3],
+                ['06', 4],
+                ['07', 6],
+                ['08', 8],
+                ['09', 7],
+                ['10', 6],
+                ['11', 6],
+                ['12', 5],
+                ['13', 5],
+                ['14', 6],
+                ['15', 6],
+                ['16', 7],
+                ['17', 8],
+                ['18', 8],
+                ['19', 9],
+                ['20', 6],
+                ['21', 5],
+                ['22', 2],
+                ['23', 2],
+                ['24', 1]
+            ]);
 
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
+            // Set chart options
+            var options = {
+                title: 'Durchschnittlicher Verbrauch',
+                curveType: 'function',
+                legend: {position: 'bottom'}
+            };
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+
+        setInterval(function () {
+
+            date = new Date();
+            let minute = date.getMinutes();
+
+
+            drawChart();
+        }, 60000);
+
     </script>
 </head>
 
@@ -82,8 +97,7 @@
     </div>
 
     <div class="row" id="chart_div">
-	</div>
- 
+    </div>
 
 
     <div class="row">
@@ -91,237 +105,72 @@
     </div>
 
 
-<div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h2 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-          Familie Müller
-        </button>
-      </h2>
-    </div>
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="false" aria-controls="collapseOne" id="customer-name">
+                        Familie Müller
+                        <button type="button" class="btn btn-success" onclick="switchStatus(true)">ON</button>
+                        <button type="button" class="btn btn-danger" onclick="switchStatus(false)">OFF</button>
+                    </button>
+                </h2>
+            </div>
 
-    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-		<table>
-			<tr>
-				<th>Attribut</th>
-				<th>Value</th>
-			</tr>
-			<tr>
-				<td>Customer ID</td>
-				<td>$id</td>
-			</tr>
-			<tr>
-				<td>Name</td>
-				<td>$name</td>
-			</tr>
-			<tr>
-				<td>Adress</td>
-				<td>$adress</td>
-			</tr>
-			<tr>
-				<td>PLZ & Ort</td>
-				<td>$zip + $location</td>
-			</tr>
-			<tr>
-				<td>Punkte</td>
-				<td>$points</td>
-			</tr>
-			<tr>
-				<td>Assets</td>
-					<td>
-					<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Freezer</button>
-					<div class="collapse" id="collapseExample">
-					  <div class="card card-body">
-						<table>
-							<tr>
-								<th>Attribut</th>
-								<th>Value</th>
-							</tr>
-							<tr>
-								<td>Asset ID</td>
-								<td>$id</td>
-							</tr>
-							<tr>
-								<td>Asset name</td>
-								<td>$name</td>
-							</tr>
-							<tr>
-								<td>Start-Up time</td>
-								<td>$startTime</td>
-							</tr>
-							<tr>
-								<td>Shut-Down time</td>
-								<td>$endtime</td>
-							</tr>
-							<tr>
-								<td>Min Duration</td>
-								<td>$minDuration</td>
-							</tr>
-						</table>
-					  </div>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-				</td>
-				<td>
-					<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">Charging Station</button>
-					<div class="collapse" id="collapseExample2">
-					  <div class="card card-body">
-						  <table>
-								<tr>
-									<th>Attribut</th>
-									<th>Value</th>
-								</tr>
-								<tr>
-									<td>Asset ID</td>
-									<td>$id</td>
-								</tr>
-								<tr>
-									<td>Asset name</td>
-									<td>$name</td>
-								</tr>
-								<tr>
-									<td>Start-Up time</td>
-									<td>$startTime</td>
-								</tr>
-								<tr>
-									<td>Shut-Down time</td>
-									<td>$endtime</td>
-								</tr>
-								<tr>
-									<td>Min Duration</td>
-									<td>$minDuration</td>
-								</tr>
-							</table>
-					  </div>
-					</div>
-				</td>				
-			</tr>
-		</table>
-		
-      </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <table>
+                        <tr>
+                            <th>Attribut</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>Current Status</td>
+                            <td id="customer-status">$id</td>
+                        </tr>
+                        <tr>
+                            <td>Customer ID</td>
+                            <td id="customer-id">$id</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td id="customer-name-inner">$name</td>
+                        </tr>
+                        <tr>
+                            <td>Adress</td>
+                            <td id="customer-address">$adress</td>
+                        </tr>
+                        <tr>
+                            <td>PLZ & Ort</td>
+                            <td id="customer-zip-location">$zip + $location</td>
+                        </tr>
+                        <tr>
+                            <td>Punkte</td>
+                            <td id="customer-points">$points</td>
+                        </tr>
+                        <tr>
+                            <td>Assets</td>
+                            <td id="customer-assets">
+
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
     </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Familie Meyer
-        </button>
-      </h2>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
-<table>
-			<tr>
-				<th>Attribut</th>
-				<th>Value</th>
-			</tr>
-			<tr>
-				<td>Customer ID</td>
-				<td>$id</td>
-			</tr>
-			<tr>
-				<td>Name</td>
-				<td>$name</td>
-			</tr>
-			<tr>
-				<td>Adress</td>
-				<td>$adress</td>
-			</tr>
-			<tr>
-				<td>PLZ & Ort</td>
-				<td>$zip + $location</td>
-			</tr>
-			<tr>
-				<td>Punkte</td>
-				<td>$points</td>
-			</tr>
-			<tr>
-				<td>Assets</td>
-					<td>
-					<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">Freezer</button>
-					<div class="collapse" id="collapseExample3">
-					  <div class="card card-body">
-						<table>
-							<tr>
-								<th>Attribut</th>
-								<th>Value</th>
-							</tr>
-							<tr>
-								<td>Asset ID</td>
-								<td>$id</td>
-							</tr>
-							<tr>
-								<td>Asset name</td>
-								<td>$name</td>
-							</tr>
-							<tr>
-								<td>Start-Up time</td>
-								<td>$startTime</td>
-							</tr>
-							<tr>
-								<td>Shut-Down time</td>
-								<td>$endtime</td>
-							</tr>
-							<tr>
-								<td>Min Duration</td>
-								<td>$minDuration</td>
-							</tr>
-						</table>
-					  </div>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-				</td>
-				<td>
-					<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">Charging Station</button>
-					<div class="collapse" id="collapseExample4">
-					  <div class="card card-body">
-						  <table>
-								<tr>
-									<th>Attribut</th>
-									<th>Value</th>
-								</tr>
-								<tr>
-									<td>Asset ID</td>
-									<td>$id</td>
-								</tr>
-								<tr>
-									<td>Asset name</td>
-									<td>$name</td>
-								</tr>
-								<tr>
-									<td>Start-Up time</td>
-									<td>$startTime</td>
-								</tr>
-								<tr>
-									<td>Shut-Down time</td>
-									<td>$endtime</td>
-								</tr>
-								<tr>
-									<td>Min Duration</td>
-									<td>$minDuration</td>
-								</tr>
-							</table>
-					  </div>
-					</div>
-				</td>				
-			</tr>
-		</table>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 </div>
 <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+

@@ -1,4 +1,4 @@
 {
-  "redisport": 6379,
+  "redisport": 32769,
   "redishost": "localhost"
 }

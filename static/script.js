@@ -1,46 +1,96 @@
-let global_res = '';
+$(document).ready(function () {
 
-function shorten(e) {
+    let host = 'http://localhost';
+    let port = 3000;
 
-    e.preventDefault();
+    let customer;
 
-    let url = document.querySelector("#url").value;
-    let key = document.querySelector("#key").value;
+    $.getJSON(host + ':' + port + '/assets?id=10', function (json) {
+        console.log("JSON Data: " + JSON.stringify(json));
 
-    fetch(`/shorten?url=${url}&key=${key}`)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (response) {
-            console.log(JSON.stringify(response));
-            global_res = response;
-            document.querySelector(".shortened").innerHTML = '' +
-                '<div class="alert alert-info mt-1 mb-4" role="alert"> ' +
-                'Your shortened link <a href="' + response.href + '" target="_blank">' + response.display + '</a>' +
-                '<button class="btn btn-default" onclick="copyURL()"><i class="far fa-copy" id="copied"></i></button>' +
-                '</div> ';
+        customer = json;
+        $('#customer-name').html(json.customer.name);
+        $('#customer-id').html(json.customer.id);
+        $('#customer-name-inner').html(json.customer.name);
+        $('#customer-address').html(json.customer.address);
+        $('#customer-zip-location').html(json.customer.zip + " " + json.customer.location);
+        $('#customer-points').html(json.customer.points);
 
-            // Empty InputFields
-            document.querySelector("#url").value = '';
-            document.querySelector("#key").value = '';
+        $.each(json.customer.assets, function (i, item) {
+            $('#customer-assets').append(
+                "<div class=\"accordion\" id=\"accordionAssets\">\n" +
+                "    <div class=\"card\">\n" +
+                "        <div class=\"card-header\" id=\"heading\" + item.name + \"\">\n" +
+                "            <h2 class=\"mb-0\">\n" +
+                "                <button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse\" + item.name + \"\" aria-expanded=\"true\" aria-controls=\"collapseOne\">\n" +
+                "                    " + item.name + "\n" +
+                "                </button>\n" +
+                "            </h2>\n" +
+                "        </div>\n" +
+                "\n" +
+                "        <div id=\"collapse" + item.name + "\" class=\"collapse show\" aria-labelledby=\"headingOne\" data-parent=\"#accordionAssets\">\n" +
+                "            <div class=\"card-body\">\n" +
+                "<table>\n" +
+                "         <tr>\n" +
+                "             <th>Attribut</th>\n" +
+                "             <th>Value</th>\n" +
+                "         </tr>\n" +
+                "         <tr>\n" +
+                "             <td>Asset ID</td>\n" +
+                "             <td>" + item.id + "</td>\n" +
+                "         </tr>\n" +
+                "         <tr>\n" +
+                "             <td>Asset name</td>\n" +
+                "             <td>" + item.name + "</td>\n" +
+                "         </tr>\n" +
+                "         <tr>\n" +
+                "             <td>Start-Up time</td>\n" +
+                "             <td>" + item.times.startTime + "</td>\n" +
+                "         </tr>\n" +
+                "         <tr>\n" +
+                "             <td>Shut-Down time</td>\n" +
+                "             <td>" + item.times.endTime + "</td>\n" +
+                "         </tr>\n" +
+                "         <tr>\n" +
+                "             <td>Min Duration</td>\n" +
+                "             <td>" + item.times.minDuration + "</td>\n" +
+                "         </tr>\n" +
+                "     </table>" +
+                "            </div>\n" +
+                "        </div>\n" +
+                "    </div>\n" +
+                "</div>"
+            );
+
+
         });
+
+    });
+
+
+    $.switchStatus = function (status) {
+
+        customer.customer.evu = status;
+        $.ajax({
+            url: host + ':' + port + '/assets?id=' + customer.id,
+            type: 'PUT',
+            contentType: "application/json",
+            body: JSON.stringify(customer),
+            success: function(data) {
+                JSON.stringify(customer);
+            }
+        });
+
+        console.log('send');
+        console.log(customer);
+
+
+    }
+
+});
+
+function switchStatus(status) {
+    $.switchStatus(status);
+
 }
 
-function copyURL() {
-    const el = document.createElement('textarea');
-    el.value = global_res.href;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-
-
-    document.getElementById('copied').classList.remove('far', 'fa-copy');
-    document.getElementById('copied').classList.add('fas', 'fa-check', 'text-success');
-
-    setTimeout(function () {
-        document.getElementById('copied').classList.remove('fas', 'fa-check', 'text-success');
-        document.getElementById('copied').classList.add('far', 'fa-copy');
-    }, 2000);
-
-}

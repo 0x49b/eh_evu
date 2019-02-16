@@ -1,0 +1,38 @@
+{
+  "customer": {
+    "name": "Mike Mueller",
+    "zip": "3003",
+    "points": 1,
+    "location": "Bern",
+    "address": "Hilfikerstrasse 1",
+    "id": 10,
+    "assets": [
+      {
+        "status": true,
+        "gpio": 18,
+        "times": [
+          {
+            "endTime": "NULL",
+            "startTime": "NULL",
+            "minDuration": "NULL"
+          }
+        ],
+        "id": 11,
+        "name": "Freezer"
+      },
+      {
+        "status": true,
+        "gpio": 23,
+        "times": [
+          {
+            "endTime": "NULL",
+            "startTime": "NULL",
+            "minDuration": "NULL"
+          }
+        ],
+        "id": 12,
+        "name": "Charging Station"
+      }
+    ]
+  }
+}

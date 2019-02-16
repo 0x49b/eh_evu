@@ -131,26 +131,17 @@ app.put('/assets', jsonParser, (req, res) => {
             } else {
 
                 oData = JSON.parse(value);
-
-                console.log(oData.customer.evu);
-                console.log(nData.customer.evu);
-
                 if(nData.customer.evu === undefined && oData.customer.evu !== undefined) {
                     console.log(oData.customer.assets);
                     console.log(nData.customer.assets);
                     nData.customer.assets = oData.customer.assets;
                 }
 
+                //console.log(JSON.stringify(oData));
                 nData.customer.points = helper.getPoints(oData.customer.points);
 
                 client.del(id);
                 client.set(id, JSON.stringify(nData), redis.print);
-
-                console.log("oData: ");
-                console.log(oData);
-                console.log();
-                console.log("nData: ");
-                console.log(nData);
 
                 res.json(nData);
             }
