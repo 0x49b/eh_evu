@@ -45,11 +45,6 @@ client.on('error', function (err) {
 });
 
 
-// Homepage
-app.get('/', (req, res) => {
-    res.render("static/index.html");
-});
-
 // Liveness and Health Probes
 app.get('/liveness', (req, res) => {
     res.json({
@@ -65,33 +60,81 @@ app.get('/health', (req, res) => {
     res.json({"status": "UP"});
 });
 
-// POST
-app.post('/assets', jsonParser, (req, res) => {
-    let data = req.body;
-    if (data === undefined || data === "" || data === null) {
-        console.log("Aint no data buddy");
-        res.render('404', {});
-    }
-    client.get(data.customer.id, (err, value) => {
-
-        if (err) {
-            client.set(data.customer.id, data, redis.print);
-        } else {
-            client.del(data.customer.id);
-            client.set(data.customer.id, data, redis.print);
-        }
-    });
-    res.json({
-        'result': 'added'
-    });
-});
-
-
 app.get('/generateCustomerId', (req, res) => {
     res.json({
         "id": helper.id()
     });
 });
+
+
+/**
+ * VIEWS
+ */
+// Homepage
+app.get('/', (req, res) => {
+    res.render("static/index.html");
+});
+
+
+/**
+ * API
+ */
+// POST
+app.post('/assets', jsonParser, (req, res) => {
+    let data = req.body;
+    if (data === undefined || data === "" || data === null) {
+        console.log("Aint no data buddy");
+        res.json({
+            'error': true,
+            'message': 'body is mandatory'
+        });
+    }
+
+    data.customer.points = data.customer.points + 1;
+    client.set(data.customer.id, JSON.stringify(data), redis.print);
+
+    res.json(data);
+});
+
+// PUT Assets
+
+app.put('/assets', jsonParser, (req, res) => {
+
+    let id = req.query.id;
+    let nData = req.body;
+
+
+    if (id === undefined || id === '' || id === null) {
+        res.json({
+            'error': true,
+            'message': 'param id is mandatory'
+        });
+    } else {
+
+        client.get(id, (err, value) => {
+
+            if (err) {
+                res.json({
+                    'error': true,
+                    'message': err
+                });
+            } else {
+
+                oData = JSON.parse(value);
+                nData.customer.points = oData.customer.points + 1;
+
+                console.log(oData);
+                console.log(nData);
+            }
+
+        });
+
+
+    }
+
+
+});
+
 
 // print the application Head
 helper.printHead();
