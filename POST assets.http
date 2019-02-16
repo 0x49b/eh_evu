@@ -18,12 +18,12 @@ Content-Type: application/json
 
 {
   "customer": {
-    "id": 1,
+    "id": 10,
     "name": "Meier",
     "address": "Hilfikerstrasse 1",
     "zip": "3003",
     "location": "Bern",
-    "points": "0"
+    "points": 0
   }
 }
 ###
@@ -35,12 +35,28 @@ Content-Type: application/json
 
 {
   "customer": {
-    "id": 1,
+    "id": 10,
     "name": "Meier",
     "address": "Hilfikerstrasse 1",
     "zip": "3003",
     "location": "Bern",
-    "points": "0"
+    "points": 0
+  }
+}
+###
+
+
+PUT http://localhost:3000/assets?id=10
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 10,
+    "name": "Meier",
+    "address": "Hilfikerstrasse 1",
+    "zip": "3003",
+    "location": "Bern",
+    "points": 0
   }
 }
 ###
