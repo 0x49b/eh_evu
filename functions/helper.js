@@ -57,7 +57,9 @@ module.exports = {
         let date = new Date();
         let seconds = date.getSeconds();
 
-        if (seconds % 2 === 0) {
+        randpoints = Math.floor(Math.random() * Math.floor(100));
+
+        if (randpoints % 2 === 0) {
             return points - 1;
         } else {
             return points + 1;
