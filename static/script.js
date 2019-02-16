@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    let host = 'http://localhost';
+    let host = 'http://192.168.99.12';
     let port = 3000;
 
     let customer;
